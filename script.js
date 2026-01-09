@@ -1,12 +1,11 @@
 
-// Full JS logic from previous steps combined
-// Includes:
-// - Drag & drop upload
-// - Render thumbnails
-// - Drag reorder
-// - Delete pages
-// - Password modal with strength indicator
-// - Preview modal with zoom, rotate, thumbnails sidebar
-// - Confirm download
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('pdfUpload');
 
-// [Paste the combined JS code from previous steps here]
+// ✅ This makes the hidden input open the file dialog when clicking the drop zone
+dropZone.addEventListener('click', () => {
+    fileInput.click();
+});
+
+// ✅ Handle file selection
+fileInput.addEventListener('change', handleFiles);
