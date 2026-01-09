@@ -1,0 +1,127 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f4f4f4;
+}
+
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.upload-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.drop-zone {
+    border: 2px dashed #3498db;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.drop-zone.dragover {
+    background-color: #eaf6ff;
+    border-color: #2980b9;
+}
+
+.selected-pages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.selected-page {
+    width: 120px;
+    text-align: center;
+    cursor: grab;
+}
+
+.selected-page canvas {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.btn-upload {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.thumbnail-sidebar {
+    width: 150px;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.thumbnail-sidebar canvas {
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.strength-indicator {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .selected-pages-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .modal-content {
+        width: 90%;
+    }
+}
